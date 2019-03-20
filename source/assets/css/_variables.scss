@@ -1,0 +1,13 @@
+
+$color-primary: #ECECEB;
+$color-secondary: #9FA09B;
+$color-middle: #D7D9CD;
+$font-stack: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@mixin grid-span($property) {
+  -ms-grid-column-span: $property;
+  grid-column: auto / span $property;
+}
+@mixin grid-col($property) {
+  -ms-grid-columns: (1fr)[$property];
+  grid-template-columns: repeat($property, 1fr);
+}

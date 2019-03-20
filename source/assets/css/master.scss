@@ -1,0 +1,44 @@
+@import '_variables.scss';
+h3, h4{
+  text-align: center;
+}
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0px;
+  }
+  @media only screen and (max-device-width: 1024px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+#hero{
+  background-image: url('../images/ft_bannerbg.jpg');
+  color: white;
+  text-align: center;
+  padding: 15rem 0px;
+}
+p{
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+section{
+  padding: 5rem 0px;
+}
+#mission{
+  background-color: $color-middle;
+}
+#partnership{
+  background-color: $color-primary;
+}
+#membership{
+  img{
+    width: 15rem;
+    max-width: 100%;
+    display: block;
+    margin: auto;
+  }
+}

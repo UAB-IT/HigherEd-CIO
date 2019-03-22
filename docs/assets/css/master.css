@@ -1,0 +1,149 @@
+h3, h4 {
+  text-align: center; }
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0px; }
+
+@media only screen and (max-device-width: 1024px) {
+  .parallax {
+    background-attachment: scroll; } }
+
+#hero {
+  background-image: url("../images/ft_bannerbg.jpg");
+  color: white;
+  text-align: center;
+  padding: 15rem 0px; }
+
+p {
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto; }
+
+.container {
+  padding: 5rem 0px; }
+
+#mission {
+  background-color: #D7D9CD; }
+
+#partnership {
+  background-color: #ECECEB; }
+
+#membership img {
+  width: 15rem;
+  max-width: 100%;
+  display: block;
+  margin: auto; }
+
+#officers {
+  background-color: #9FA09B; }
+  #officers .grid {
+    grid-gap: 10rem;
+    margin-top: 5rem; }
+
+#initiatives h4 {
+  font-size: 2.5rem;
+  text-align: left; }
+
+#initiatives .grid {
+  margin-top: 10rem; }
+
+#contact {
+  background-color: #ECECEB; }
+  #contact h3 {
+    margin-bottom: 5rem; }
+
+.card {
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 1.5rem; }
+  .card img {
+    width: calc(100% + 3rem);
+    margin-left: -1.5rem;
+    margin-top: -1.5rem; }
+  .card h5 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 0.5rem 0px 0px; }
+  .card p {
+    text-align: center;
+    margin: 0px;
+    opacity: 0.5; }
+
+.transition, .accordion, .accordion .acc-content, .accordion i:before, .accordion i:after, .accordion input[type=checkbox]:checked ~ .acc-content {
+  transition: all 0.25s ease-in-out; }
+
+.no-select, .accordion .acc-header {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.accordion {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 4px; }
+  .accordion .acc-header {
+    font-size: 2rem;
+    text-align: left;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid #D7D9CD;
+    border-radius: 4px;
+    padding: 1rem; }
+  .accordion .acc-content {
+    opacity: 0;
+    margin-top: 0rem;
+    max-height: 0px; }
+  .accordion i {
+    position: absolute;
+    transform: translate(-2rem, 0);
+    right: 0; }
+    .accordion i:before, .accordion i:after {
+      content: "";
+      position: absolute;
+      background-color: #9FA09B;
+      width: 0.4rem;
+      height: 1.2rem;
+      margin-top: 1.8rem; }
+    .accordion i:before {
+      transform: translate(-4px, 0) rotate(45deg); }
+    .accordion i:after {
+      transform: translate(2px, 0) rotate(-45deg); }
+  .accordion input[type=checkbox] {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0; }
+    .accordion input[type=checkbox]:checked ~ .acc-content {
+      margin-top: 3rem;
+      opacity: 1;
+      max-height: min-content; }
+    .accordion input[type=checkbox]:checked ~ i:before {
+      transform: translate(2px, 0) rotate(45deg); }
+    .accordion input[type=checkbox]:checked ~ i:after {
+      transform: translate(-4px, 0) rotate(-45deg); }
+
+#contact button {
+  background-color: #9FA09B;
+  border-color: #9FA09B;
+  color: white;
+  float: right; }
+
+footer {
+  background-color: #232827;
+  color: white; }
+  footer p {
+    margin: 0px; }
+  footer .container {
+    padding: 3rem 0px; }

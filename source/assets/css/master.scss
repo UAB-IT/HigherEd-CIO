@@ -25,7 +25,7 @@ p{
   margin-left: auto;
   margin-right: auto;
 }
-section{
+.container{
   padding: 5rem 0px;
 }
 #mission{
@@ -40,5 +40,145 @@ section{
     max-width: 100%;
     display: block;
     margin: auto;
+  }
+}
+#officers{
+  background-color: $color-secondary;
+  .grid{
+    grid-gap: 10rem;
+    margin-top: 5rem;
+  }
+}
+#initiatives{
+  h4{
+    font-size: 2.5rem;
+    text-align: left;
+  }
+  .grid{
+    margin-top: 10rem;
+  }
+}
+#contact{
+  background-color: $color-primary;
+  h3{
+    margin-bottom: 5rem;
+  }
+}
+.card{
+  background: white;
+  border-radius: $radius;
+  overflow: hidden;
+  padding: 1.5rem;
+  img{
+    width: calc(100% + 3rem);
+    margin-left: -1.5rem;
+    margin-top: -1.5rem;
+  }
+  h5{
+    font-size: 2rem;
+    text-align: center;
+    margin: 0.5rem 0px 0px;
+  }
+  p{
+    text-align: center;
+    margin: 0px;
+    opacity: 0.5;
+  }
+}
+.transition{
+  transition: all 0.25s ease-in-out;
+}
+.no-select{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.accordion{
+  position: relative;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 4px;
+  @extend .transition;
+  .acc-header{
+    font-size: 2rem;
+    text-align: left;
+    margin: 0;
+    cursor: pointer;
+    @extend .no-select;
+    border: 1px solid $color-middle;
+    border-radius: $radius;
+    padding: 1rem;
+  }
+  .acc-content{
+    @extend .transition;
+    opacity: 0;
+    margin-top: 0rem;
+    max-height: 0px;
+  }
+  i{
+    position: absolute;
+    transform: translate( -2rem , 0 );
+    right: 0;
+    &:before , &:after{
+      content: "";
+      @extend .transition;
+      position: absolute;
+      background-color: $color-secondary;
+      width: 0.4rem;
+      height: 1.2rem;
+      margin-top: 1.8rem;
+    }
+    &:before{
+      transform: translate( -4px , 0 ) rotate( 45deg );
+    }
+    &:after{
+      transform: translate( 2px , 0 ) rotate( -45deg );
+    }
+  }
+  input[type=checkbox]{
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    &:checked{
+        &~.acc-content{
+          margin-top: 3rem;
+          opacity: 1;
+          max-height: min-content;
+          @extend .transition;
+        }
+        &~i{
+          &:before{
+          transform: translate( 2px , 0 ) rotate( 45deg );
+          }
+          &:after{
+            transform: translate( -4px , 0 ) rotate( -45deg );
+          }
+        }
+    }
+  }
+}
+#contact{
+  button{
+    background-color: $color-secondary;
+    border-color: $color-secondary;
+    color: white;
+    float: right;
+  }
+}
+footer{
+  background-color: #232827;
+  color: white;
+  p{
+    margin: 0px;
+  }
+  .container{
+    padding: 3rem 0px;;
   }
 }

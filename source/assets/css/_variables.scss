@@ -11,3 +11,4 @@ $font-stack: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-s
   -ms-grid-columns: (1fr)[$property];
   grid-template-columns: repeat($property, 1fr);
 }
+$radius: 4px;

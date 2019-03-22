@@ -222,6 +222,7 @@ input[type="submit"].button-full,
 input[type="reset"].button-full,
 input[type="button"].button-full {
   display: block;
+  width: 100%;
 }
 
 .button:hover,
@@ -298,9 +299,10 @@ textarea {
 }
 
 textarea {
-  min-height: 65px;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  min-height: 20rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  resize:vertical;
 }
 
 input[type="email"]:focus,

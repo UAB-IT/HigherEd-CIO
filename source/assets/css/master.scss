@@ -28,10 +28,7 @@ p{
 .container{
   padding: 5rem 0px;
 }
-#mission{
-  background-color: $color-middle;
-}
-#partnership{
+#partnership, #mission{
   background-color: $color-primary;
 }
 #membership{

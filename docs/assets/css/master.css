@@ -26,10 +26,7 @@ p {
 .container {
   padding: 5rem 0px; }
 
-#mission {
-  background-color: #D7D9CD; }
-
-#partnership {
+#partnership, #mission {
   background-color: #ECECEB; }
 
 #membership img {

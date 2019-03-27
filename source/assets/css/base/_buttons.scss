@@ -1,0 +1,71 @@
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  @include font-size(1.2);
+  @include line-height(1);
+  @include margin-top(1);
+  @extend .uppercase;
+  padding: $padding-m;
+  display: inline-block;
+  color: $btn-color;
+  background-color: transparent;
+  border-radius: $borderRadius;
+  border: $borderWidth solid $btn-color;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  box-sizing: border-box;
+  &:hover, &:focus{
+    color: $btn-hover-color;
+    border-color: $btn-hover-color;
+    outline: 0;
+  }
+  &.btn-primary{
+    color: #FFF;
+    background-color: $btn-primary-color;
+    border-color: $btn-primary-color;
+    &:hover, &:focus{
+      color: #FFF;
+      background-color: $btn-primary-hover;
+      border-color: $btn-primary-hover;
+    }
+  }
+  &.warning{
+    color: #FFF;
+    background-color: $color-warning;
+    border-color: $color-warning;
+    &:hover, &:focus{
+      color: #FFF;
+      background-color: $color-warning-alt;
+      border-color: $color-warning-alt;
+    }
+  }
+  &.caution{
+    color: #FFF;
+    background-color: $color-caution;
+    border-color: $color-caution;
+    &:hover, &:focus{
+      color: #FFF;
+      background-color: $color-caution-alt;
+      border-color: $color-caution-alt;
+    }
+  }
+  &.success{
+    color: #FFF;
+    background-color: $color-success;
+    border-color: $color-success;
+    &:hover, &:focus{
+      color: #FFF;
+      background-color: $color-success-alt;
+      border-color: $color-success-alt;
+    }
+  }
+  &.btn-full{
+    display: block;
+  }
+}

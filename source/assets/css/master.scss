@@ -1,7 +1,4 @@
-@import '_variables.scss';
-h3, h4{
-  text-align: center;
-}
+@import 'base/_variables.scss';
 .parallax {
     background-attachment: fixed;
     background-position: center;
@@ -16,39 +13,47 @@ h3, h4{
 }
 #hero{
   background-image: url('../images/Updated-Bkgd-Img.jpg');
-  color: white;
   text-align: center;
-  padding: 15rem 0px;
+  padding: 25vh 0px;
+  color: white;
 }
 p{
   max-width: 60rem;
   margin-left: auto;
   margin-right: auto;
 }
-.container{
-  padding: 5rem 0px;
+section{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  & h3:first-child{
+    text-align: center;
+  }
 }
-#partnership, #mission{
-  background-color: $color-primary;
+#mission, #officers{
+  background-color: $color-lightgrey;
+  text-align: center;
 }
 #membership{
   img{
-    width: 15rem;
-    max-width: 100%;
+    max-width: 15rem;
     display: block;
     margin: auto;
   }
+  h4{
+    text-align: center;
+  }
 }
 #officers{
-  background-color: $color-secondary;
   .grid{
-    grid-gap: 10rem;
+    grid-gap: 8rem;
     margin-top: 5rem;
   }
 }
 #initiatives{
+  & > p{
+    text-align: center;
+  }
   h4{
-    font-size: 2.5rem;
     text-align: left;
   }
   .grid{
@@ -56,14 +61,14 @@ p{
   }
 }
 #contact{
-  background-color: $color-primary;
+  background-color: $color-lightgrey;
   h3{
     margin-bottom: 5rem;
   }
 }
 .card{
   background: white;
-  border-radius: $radius;
+  border-radius: $borderRadius;
   overflow: hidden;
   padding: 1.5rem;
   img{
@@ -71,13 +76,7 @@ p{
     margin-left: -1.5rem;
     margin-top: -1.5rem;
   }
-  h5{
-    font-size: 2rem;
-    text-align: center;
-    margin: 0.5rem 0px 0px;
-  }
   p{
-    text-align: center;
     margin: 0px;
     opacity: 0.5;
   }
@@ -106,8 +105,8 @@ p{
     margin: 0;
     cursor: pointer;
     @extend .no-select;
-    border: 1px solid $color-middle;
-    border-radius: $radius;
+    border: 1px solid $color-grey;
+    border-radius: $borderRadius;
     padding: 1rem;
   }
   .acc-content{
@@ -124,10 +123,10 @@ p{
       content: "";
       @extend .transition;
       position: absolute;
-      background-color: $color-secondary;
+      background-color: $color-primary;
       width: 0.4rem;
       height: 1.2rem;
-      margin-top: 1.8rem;
+      margin-top: 1.3rem;
     }
     &:before{
       transform: translate( -4px , 0 ) rotate( 45deg );
@@ -161,21 +160,12 @@ p{
     }
   }
 }
-#contact{
-  button{
-    background-color: $color-secondary;
-    border-color: $color-secondary;
-    color: white;
-    float: right;
-  }
-}
 footer{
   background-color: #232827;
   color: white;
   p{
     margin: 0px;
   }
-  .container{
-    padding: 3rem 0px;;
-  }
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }

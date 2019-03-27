@@ -1,0 +1,107 @@
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: $color-light;
+  @include font-size(1.4375);
+  @include text-contrast($color-light);
+  padding: $padding-s;
+  border: $borderWidth solid $borderColor-Light;
+  border-radius: $borderRadius;
+  box-shadow: none;
+  box-sizing: border-box;
+  outline: 0;
+  &::placeholder{
+    @include text-contrast($color-light);
+    opacity: 0.5;
+  }
+  &:active, &:focus{
+    border: $borderWidth solid $color-primary;
+    outline: 0;
+  }
+}
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+option:first-child{
+  display: none;
+}
+textarea {
+  min-height: 65px;
+}
+
+$radio:  !default;
+$radio-fill:  !default;
+$checkbox:  !default;
+$checkbox-fill:  !default;
+
+.checkbox, .radio {
+  display: inline-block;
+  position: relative;
+  padding: 0 6px;
+  margin: 10px 0 0;
+  input[type='radio'], & input[type='checkbox'] {
+    opacity: 0;
+    display: none;
+  }
+  label{
+    font-weight: normal;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    &:before{
+      margin-right: 0.5em;
+      display: inline-block;
+      position: relative;
+      @if $icon-font == none{
+        font-size: 1.5em;
+        top: 0.05em;
+        line-height: 0px;
+        width: 0.6em;
+      }
+      @else{
+        font-family: $icon-font;
+        top: 0.05em;
+      }
+    }
+  }
+}
+.checkbox input[type='checkbox']{
+    &+label:before {
+      content: "#{$checkbox}";
+  }
+  &:checked+label:before{
+    color: $selected-color;
+    content: "#{$checkbox-fill}";
+  }
+}
+.radio input[type='radio']{
+    &+label:before {
+      content: "#{$radio}";
+  }
+  &:checked+label:before{
+    color: $selected-color;
+    content: "#{$radio-fill}";
+  }
+}
+label,
+legend {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+fieldset {
+  padding: 0;
+  border-width: 0;
+}

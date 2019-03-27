@@ -1,0 +1,103 @@
+//Base
+$doc-font-size: 10;
+
+//Colors
+$color-primary: #D7D9CD;
+
+$color-success: #32b643;
+$color-success-alt: darken($color-success, 5%);
+$color-caution: #ffb700;
+$color-caution-alt: darken($color-caution, 3%);
+$color-warning: #e85600;
+$color-warning-alt: darken($color-warning, 5%);
+
+$color-light: #fff;
+$color-lightgrey: #ECECEB;
+$color-grey: #D7D9CD;
+$color-darkgrey: #9FA09B;
+$color-dark: #232827;
+
+//Fonts
+$font-stack: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-header: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-monospace: monospace;
+
+//Spacing
+$padding-med: 3rem;
+$padding-large: 5rem;
+$grid-gap: 2rem;
+$grid-column-gap: $grid-gap;
+$grid-row-gap: $grid-gap;
+$section-margin: 10rem;
+
+$padding-s: 0.5rem 0.7rem;
+$padding-m: 1rem 1.5rem;
+$padding-inline: 0.2rem 0.5rem;
+
+//Breakpoints
+$mobile: 400px;
+$tablet: 750px;
+$desktop: 1000px;
+
+//Styles
+$link-color: $color-primary;
+$link-hover-color: darken($link-color, 15%);
+$link-visited-color: darken($link-color, 10%);
+
+$btn-color: $color-dark;
+$btn-hover-color: lighten($btn-color, 30%);
+$btn-primary-color: $link-color;
+$btn-primary-hover: darken($link-color, 10%);
+
+$font-color: black;
+$header-color: $color-dark;
+$mark-color: $color-primary;
+$font-color-light: white;
+
+$pdf-icon: '';
+
+$borderWidth: 1px;
+$borderRadius: 4px;
+$borderColor: $color-dark;
+$borderColor-Light: $color-grey;
+$btn-borderRadius: $borderRadius;
+
+$list-color: $color-primary;
+$list-align: false;
+$colored-list: false;
+$list-padding: 1rem;
+
+$icon-font: 'stratus';
+$radio: ;
+$radio-fill: ;
+$checkbox: ;
+$checkbox-fill: ;
+$selected-color: $color-primary;
+
+//Breakpoints
+@mixin xlarge {
+  @media all and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin large {
+  @media all and (min-width: 839px) {
+    @content;
+  }
+}
+@mixin medium {
+  @media all and (min-width: 480px) {
+    @content;
+  }
+}
+
+@mixin text-contrast($n) {
+  $color-brightness: round((red($n) * 299) + (green($n) * 587) + (blue($n) * 114) / 1000);
+  $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
+  @if abs($color-brightness) < ($light-color/2){
+    color: white;
+  }
+  @else {
+    color: black;
+  }
+}

@@ -1,0 +1,21 @@
+/* Tables
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+table{
+  border-collapse: collapse;
+}
+td,
+th {
+  text-align: left;
+  border-bottom: $borderWidth solid $borderColor-Light;
+  padding: $padding-m;
+}
+
+td:first-child,
+th:first-child {
+  padding-left: 0;
+}
+
+td:last-child,
+th:last-child {
+  padding-right: 0;
+}

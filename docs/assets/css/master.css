@@ -1,6 +1,3 @@
-h3, h4 {
-  text-align: center; }
-
 .parallax {
   background-attachment: fixed;
   background-position: center;
@@ -14,35 +11,41 @@ h3, h4 {
 
 #hero {
   background-image: url("../images/Updated-Bkgd-Img.jpg");
-  color: white;
   text-align: center;
-  padding: 15rem 0px; }
+  padding: 25vh 0px;
+  color: white; }
 
 p {
   max-width: 60rem;
   margin-left: auto;
   margin-right: auto; }
 
-.container {
-  padding: 5rem 0px; }
+section {
+  padding-top: 5rem;
+  padding-bottom: 5rem; }
+  section h3:first-child {
+    text-align: center; }
 
-#partnership, #mission {
-  background-color: #ECECEB; }
+#mission, #officers {
+  background-color: #ECECEB;
+  text-align: center; }
 
 #membership img {
-  width: 15rem;
-  max-width: 100%;
+  max-width: 15rem;
   display: block;
   margin: auto; }
 
-#officers {
-  background-color: #9FA09B; }
-  #officers .grid {
-    grid-gap: 10rem;
-    margin-top: 5rem; }
+#membership h4 {
+  text-align: center; }
+
+#officers .grid {
+  grid-gap: 8rem;
+  margin-top: 5rem; }
+
+#initiatives > p {
+  text-align: center; }
 
 #initiatives h4 {
-  font-size: 2.5rem;
   text-align: left; }
 
 #initiatives .grid {
@@ -62,12 +65,7 @@ p {
     width: calc(100% + 3rem);
     margin-left: -1.5rem;
     margin-top: -1.5rem; }
-  .card h5 {
-    font-size: 2rem;
-    text-align: center;
-    margin: 0.5rem 0px 0px; }
   .card p {
-    text-align: center;
     margin: 0px;
     opacity: 0.5; }
 
@@ -107,10 +105,10 @@ p {
     .accordion i:before, .accordion i:after {
       content: "";
       position: absolute;
-      background-color: #9FA09B;
+      background-color: #D7D9CD;
       width: 0.4rem;
       height: 1.2rem;
-      margin-top: 1.8rem; }
+      margin-top: 1.3rem; }
     .accordion i:before {
       transform: translate(-4px, 0) rotate(45deg); }
     .accordion i:after {
@@ -131,16 +129,10 @@ p {
     .accordion input[type=checkbox]:checked ~ i:after {
       transform: translate(-4px, 0) rotate(-45deg); }
 
-#contact button {
-  background-color: #9FA09B;
-  border-color: #9FA09B;
-  color: white;
-  float: right; }
-
 footer {
   background-color: #232827;
-  color: white; }
+  color: white;
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
   footer p {
     margin: 0px; }
-  footer .container {
-    padding: 3rem 0px; }

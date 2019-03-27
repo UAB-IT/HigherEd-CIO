@@ -1,0 +1,117 @@
+$list-position: inside !default;
+@if $list-align == true{
+  $list-position: outside;
+}
+@else{
+  $list-position: inside;
+}
+$list-padding: 1rem !default;
+/* Lists
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+ul, ol {
+  @if $colored-list == true {
+    list-style: none;
+  }
+  list-style: none;
+  padding-left: 0px;
+  margin: $list-padding 0px 0px 2.5rem;
+}
+*:not(li) > ul, *:not(li) > ol{
+  margin-top: 0px;
+  @if $list-align == true{
+    margin-left: 0px;
+  }
+  @else{
+    @if $colored-list == true{
+    margin-left: 2rem;
+    }
+    @else{
+      margin-left: 1rem;
+    }
+  }
+}
+ul > li, ol > li{
+    margin-bottom: $list-padding;
+}
+@if $colored-list == true {
+     ul > li{
+       &::before{
+         display: block;
+         position: relative;
+         max-width: 0px;
+         max-height: 0px;
+         left: -1em;
+         top: 0.2em;
+         color: $list-color;
+         font-weight: bold;
+         font-size: 0.8em;
+         content: '●';
+       }
+       ul li::before{
+          content: '○';
+       }
+       ul ul li::before{
+         content: '-';
+       }
+     }
+      ol{
+        counter-reset: list;
+      }
+      ol li {
+         counter-increment: list;
+         &::before {
+          content: counter(list, decimal) ". ";
+          display: block;
+          position: relative;
+          max-width: 0px;
+          max-height: 0px;
+          font-size: 0.8em;
+          left: -1.3em;
+          top: 0.3em;
+          color: $list-color;
+        }
+        ol li::before{
+           content: counter(list, upper-latin) ". ";
+        }
+        ol ol li::before{
+          content: counter(list, lower-latin) ". ";
+        }
+     }
+   }
+   @else{
+     ul > li{
+       list-style: disc $list-position;
+       ul > li{
+         list-style: circle $list-position;
+         ul > li{
+           list-style: square $list-position;
+         }
+       }
+     }
+     ol > li{
+       list-style: decimal $list-position;
+       ol > li{
+         list-style: upper-latin $list-position;
+         ol > li{
+           list-style: lower-latin $list-position;
+         }
+       }
+     }
+   }
+   .list-inside{
+     list-style-position: inside !important;
+   }
+
+
+//Description Lists
+dl{
+  margin: 1rem 0px;
+}
+dt{
+  font-weight: bold;
+}
+dd{
+  margin: 0px;
+  margin-left: 1em;
+  margin-bottom: $list-padding;
+}

@@ -1,5 +1,15 @@
 @import '_variables.scss';
-
+header{
+  align-items: end;
+  height: min-content;
+}
+header img{
+  width: 150px;
+}
+header.container{
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
 .topnav {
   overflow: hidden;
   width: 100%;
@@ -17,11 +27,11 @@
   }
   ul{
     text-decoration: none;
-    list-style: none;
     margin: 0px;
     padding: 0px;
   }
   li{
+    list-style: none;
     margin: 0px;
     padding: 0px;
   }
@@ -29,22 +39,19 @@
     display: none;
   }
 }
-@media screen and (max-width: 600px) {
-  .topnav li:not(:first-child) {display: none;}
+@media screen and (max-width: 750px) {
+  .topnav li {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
-  }
-  .topnav.responsive{
-    position: fixed;
   }
   .topnav.responsive li{
     display: block;
@@ -54,17 +61,4 @@
     display: block;
     text-align: left;
   }
-}
-header{
-  display: grid;
-  grid-template-columns: 1fr 5fr;
-  align-items: end;
-  height: min-content;
-}
-header img{
-  width: 150px;
-}
-header.container{
-  padding-top: 3rem;
-  padding-bottom: 1rem;
 }

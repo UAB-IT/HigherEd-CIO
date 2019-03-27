@@ -1,0 +1,83 @@
+
+@mixin gridColumns($number){
+  grid-template-columns: repeat($number, 1fr);
+}
+@mixin gridSpan($number){
+  grid-column: span $number;
+}
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  box-sizing: border-box;
+}
+.container.l {
+  width: 100%;
+  max-width: 1000px;
+}
+.container.m {
+  width: 100%;
+  max-width: 1000px;
+}
+.container.s {
+  width: 100%;
+  max-width: 1000px;
+}
+
+//Basic Grid
+.grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: grid;
+  grid-row-gap: $grid-row-gap;
+  grid-column-gap: $grid-column-gap;
+  @include gridColumns(12);
+}
+.ie11{
+  .grid > *{
+    min-width: min-content;
+    width: calc((100% / 5) - $grid-column-gap);
+  }
+}
+
+//Small / Default
+@for $i from 1 through 6{
+  .col-#{$i}{
+    @include gridColumns($i);
+  }
+}
+@for $i from 2 through 12{
+  .span-#{$i}{
+    @include gridSpan($i);
+  }
+}
+
+@include medium{
+  @for $i from 1 through 6{
+    .col-#{$i}-m{
+      @include gridColumns($i);
+    }
+  }
+  @for $i from 2 through 12{
+    .span-#{$i}-m{
+      @include gridSpan($i);
+    }
+  }
+}
+
+@include large{
+  @for $i from 1 through 6{
+    .col-#{$i}-l{
+      @include gridColumns($i);
+    }
+  }
+  @for $i from 2 through 12{
+    .span-#{$i}-l{
+      @include gridSpan($i);
+    }
+  }
+}

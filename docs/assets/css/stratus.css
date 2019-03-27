@@ -13,13 +13,13 @@ p {
   margin-bottom: 1.6em; }
 
 * {
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 code, pre, kbd {
   font-family: monospace; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 /* mixins
    ========================================================================== */
@@ -28,7 +28,7 @@ body {
   font-size: 1.6rem;
   line-height: 16px;
   line-height: 1.6em;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 /* Headings
    ========================================================================== */

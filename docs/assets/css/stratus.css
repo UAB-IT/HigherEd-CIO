@@ -138,8 +138,7 @@ body {
   max-width: 1000px; }
 
 .container.m {
-  width: 100%;
-  max-width: 1000px; }
+  max-width: 500px; }
 
 .container.s {
   width: 100%;
@@ -344,7 +343,8 @@ option:first-child {
   display: none; }
 
 textarea {
-  min-height: 65px; }
+  min-height: 10em;
+  resize: vertical; }
 
 .checkbox, .radio {
   display: inline-block;

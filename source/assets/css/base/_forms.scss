@@ -38,7 +38,8 @@ option:first-child{
   display: none;
 }
 textarea {
-  min-height: 65px;
+  min-height: 10em;
+  resize: vertical;
 }
 
 $radio:  !default;

@@ -62,8 +62,23 @@
       <h4>Current Membership</h4>
       <p>Council members are appointed by their institutions leadership and represent the best interests of their institutions and the State of Alabama. Members will serve on committees, attend meetings in person or electronically, and vote on all measures presented to the council. Members may vote by providing a written proxy to the Chairperson if unable to vote at scheduled times.  Members are expected to participate in all council elections. </p>
     </div>
-		<div class="accordion">
-			<input type="checkbox">
+		<style>
+			#accordion .acc-panel :first-child {
+				padding: 0.2rem;
+				margin: 0px;
+			}
+
+			#accordion .acc-content {
+				height: 0px;
+				overflow: hidden;
+			}
+			#accordion .active .acc-content {
+				height: max-content;
+				pointer-events: none;
+			}
+		</style>
+		<div id="accordion" class="grid col-1 col-2-m span-2-m">
+		<div class="acc-panel">
 			<i></i>
 			<h4 class="acc-header">Founding Institutions</h4>
 			<div class="acc-content">
@@ -88,8 +103,7 @@
 				</ul>
 			</div>
 	</div>
-	<div class="accordion">
-		<input type="checkbox">
+	<div class="acc-panel">
 		<i></i>
 		<h4 class="acc-header">Current Members</h4>
 		<div class="acc-content">
@@ -112,7 +126,23 @@
 				<li>Jim Purcell – State of Alabama</li>
 			</ul>
 		</div>
-</div>
+</div></div>
+<script>
+function initAccordion(accordionElem){
+function handlePanelClick(event){
+		showPanel(event.currentTarget.parentElement);
+}
+function showPanel(panel){
+	 panel.classList.toggle("active");
+}
+var allPanelElems = accordionElem.querySelectorAll(".acc-header");
+for (var i = 0, len = allPanelElems.length; i < len; i++){
+		 allPanelElems[i].addEventListener("click", handlePanelClick);
+}
+//showPanel(allPanelElems[0])
+}
+initAccordion(document.getElementById("accordion"));
+</script>
   </section>
 	<section id="officers">
 		<div class="container l">
